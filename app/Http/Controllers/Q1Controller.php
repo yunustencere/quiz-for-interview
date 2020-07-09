@@ -8,9 +8,10 @@ class Q1Controller extends Controller
 {
 		public function index()
 		{
+			/*Remove comment lines to test the cases.(Only remove one at a time)*/ 
 			//$this->testCaseA(); 
 			//$this->testCaseB(); 
-			$this->testCaseC();
+			//$this->testCaseC();
 			//echo($this->rollDice());    
 		}
 

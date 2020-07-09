@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use \App\Weather;
+use \App\City;
 
-class WeatherTableSeeder extends Seeder
+class CitiesTableSeeder extends Seeder
 {
 		/**
 		 * Run the database seeds.
@@ -12,18 +12,18 @@ class WeatherTableSeeder extends Seeder
 		 */
 		public function run()
 		{
-			DB::table('weather')->delete();
-			$weathers = [
+			DB::table('cities')->delete();
+			$cities = [
 				[ 'name' => 'Konya' , 'id' => '306569'],
 				[ 'name' => 'Ankara' , 'id' => '323784'],
 				[ 'name' => 'İstanbul' , 'id' => '745042'],
 				[ 'name' => 'Kocaeli' , 'id' => '742865'],
 				[ 'name' => 'Manisa' , 'id' => '304825']
 			];
-			foreach ($weathers as $weather)
+			foreach ($cities as $city)
 			{
-			 	Weather::create(
-					$weather
+			 	City::create(
+					$city
 				);
 			}
 		}
