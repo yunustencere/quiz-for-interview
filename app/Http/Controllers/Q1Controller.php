@@ -9,9 +9,9 @@ class Q1Controller extends Controller
 		public function index()
 		{
 			/*Remove comment lines to test the cases.(Only remove one at a time)*/ 
-			$this->testCaseA(); 
+			//$this->testCaseA(); 
 			//$this->testCaseB(); 
-			//$this->testCaseC();
+			$this->testCaseC();
 			//echo($this->rollDice());    
 		}
 
@@ -23,13 +23,14 @@ class Q1Controller extends Controller
 		public function myRand()
 		{ 
 			$number = hrtime(true); //Get system time
-			$number =  ($number % pow(10, 12)) /10; //Get time in a fixed digit range to work on and remove lowest repetitive digit
+			$number =  ($number % pow(10, 14)) /100; //Get time in a fixed digit range to work on and remove lowest repetitive digit
 			$lowerDigits = $number % pow(10, 4); //Get lower digits, they are way too more random than higher digits
 
 			//Multiply lowerDigits with a big number to randomize higher digits in "number" variable, use bitwise XOR operator to do that
 			$number = ($number ^ (pow(10, 8)*($lowerDigits))) 
 				+ ($number ^ (pow(10, 4)*($lowerDigits))) 
 				+ $lowerDigits;
+			$number = ($lowerDigits ^ ($number%pow(10, 10))/pow(10, 6));//Now shuffle lower digits
 
 			//Get rid of repetitive digits
 			$number =  $number % pow(10, 9);
@@ -56,10 +57,10 @@ class Q1Controller extends Controller
 			echo ($lessThen);
 		}
 
-		public  function testCaseC(): void //Throw dice 600 times and checkout the results
+		public  function testCaseC(): void //Throw dice 600000 times and checkout the results
 		{
 			$diceCounter = array_fill(0, 6, 0);;
-			for ($i=0; $i < 600; $i++) { 
+			for ($i=0; $i < 600000; $i++) { 
 				$diceValue = $this->rollDice();
 				$diceCounter[$diceValue-1] += 1;
 			}
