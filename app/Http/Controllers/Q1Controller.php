@@ -10,8 +10,8 @@ class Q1Controller extends Controller
 		{
 			/*Remove comment lines to test the cases.(Only remove one at a time)*/ 
 			//$this->testCaseA(); 
-			//$this->testCaseB(); 
-			$this->testCaseC();
+			$this->testCaseB(); 
+			//$this->testCaseC();
 			//echo($this->rollDice());    
 		}
 
@@ -30,7 +30,7 @@ class Q1Controller extends Controller
 			$number = ($number ^ (pow(10, 8)*($lowerDigits))) 
 				+ ($number ^ (pow(10, 4)*($lowerDigits))) 
 				+ $lowerDigits;
-			$number = ($lowerDigits ^ ($number%pow(10, 10))/pow(10, 6));//Now shuffle lower digits
+			$number = ($number ^ ($number >> 15));//Now shuffle lower digits with the shuffled higher digits
 
 			//Get rid of repetitive digits
 			$number =  $number % pow(10, 9);
