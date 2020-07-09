@@ -1,5 +1,5 @@
 ## Quiz
-Every answers have a controller. You can see the answers of questions are marked before the controller name.(Q1Controller, Q2Controller etc.). 
+Every answer has a unique controller. You can see the answers of questions are marked before the controller name.(Q1Controller, Q2Controller etc.). 
 There is a file named "Psuedocode" on the root directory of the project. You can see the psuedocodes of related questions.
 
 You should run
