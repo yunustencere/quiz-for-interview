@@ -1,0 +1,21 @@
+FUNCTION myRand
+
+	1)//Get system time
+	number = Detailed system time (like nanoseconds)
+
+	2)//Get lower digits, they are way too more random than higher digits
+	lowerDigits = number % 10000 
+
+	3)
+	//Multiply lowerDigits with a big number to shift it to left and randomize higher digits in "number" variable, use bitwise XOR operator to do that
+
+	number = lowerDigits +
+		number XOR (10^4 * lowerDigits) +
+		number XOR (10^8 * lowerDigits)
+
+	4)
+	//Get rid of repetitive digits
+	number = number % 10^9
+
+	5)
+	return number

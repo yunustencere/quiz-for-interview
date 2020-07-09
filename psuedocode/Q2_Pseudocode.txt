@@ -1,0 +1,18 @@
+Function isAnagramOfPalindrome(S)
+
+1) //Count the numbers of letters
+FOR i = 0, i < N, i++
+	counts[S[i]] += 1;
+END FOR LOOP 
+
+2) //Check counts to decide if S is anagram of palindrome
+
+oddCount = 0
+FOREACH counts as count
+	IF count%2 is not 0
+		oddCount += 1
+	IF (oddCount > 1) OR (N%2 = 0 AND oddCount = 1)
+		return 0
+END FOREACH LOOP
+return 1
+
