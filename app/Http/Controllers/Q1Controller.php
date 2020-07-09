@@ -9,7 +9,7 @@ class Q1Controller extends Controller
 		public function index()
 		{
 			/*Remove comment lines to test the cases.(Only remove one at a time)*/ 
-			//$this->testCaseA(); 
+			$this->testCaseA(); 
 			//$this->testCaseB(); 
 			//$this->testCaseC();
 			//echo($this->rollDice());    
@@ -22,7 +22,8 @@ class Q1Controller extends Controller
 
 		public function myRand()
 		{ 
-			$number = hrtime(true) / 100; //Get system time
+			$number = hrtime(true); //Get system time
+			$number =  ($number % pow(10, 12)) /10; //Get time in a fixed digit range to work on and remove lowest repetitive digit
 			$lowerDigits = $number % pow(10, 4); //Get lower digits, they are way too more random than higher digits
 
 			//Multiply lowerDigits with a big number to randomize higher digits in "number" variable, use bitwise XOR operator to do that
