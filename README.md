@@ -1,4 +1,6 @@
 ## Quiz
+Questions are in the Questions.txt which is at the root directory of the project
+
 Every answer has a unique controller. You can see the answers of questions are marked before the controller name.(Q1Controller, Q2Controller etc. Hint:check web.php). 
 There is a file named "Psuedocode" on the root directory of the project. You can see the psuedocodes of related questions.
 

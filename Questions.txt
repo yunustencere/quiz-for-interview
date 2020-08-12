@@ -1,0 +1,54 @@
+Questions
+
+Question 1a) Write int RollDice method which replicates die throw (i.e.
+should return 1,2,3,4,5 or 6 randomly).
+You cannot use any random number generator methods (such as Random())
+(Pseudocode is sufficient)
+Question 1b)Write 3 test cases for RollDice (i.e. if you were asked to test whether
+RollDice method is working
+correctly, what would you test and how)
+
+Question 2)A string is a palindrome if it has exactly the same sequence of
+characters when read lefttoright as it has when read righttoleft. For example, the
+following strings are palindromes:
+● "kayak",
+● "codilitytilidoc",
+● "neveroddoreven". A string A is an anagram of a string B if A can be
+obtained from B by rearranging the characters. For example, in each of the
+following pairs one string is an anagram of the other:
+● "mary" and "army",
+● "rocketboys" and "octobersky",
+● "codility" and "codility". Write a function (Pseudocode is sufficient):
+function isAnagramOfPalindrome(S)
+that, given a nonempty string S consisting of N characters, returns 1 if S is an
+anagram of some palindrome and returns 0 otherwise. Assume that:
+
+● N is an integer within the range [1..100,000];
+
+● string S consists only of lowercase letters (a−z). For example, given S =
+"dooernedeevrvn", the function should return 1, because "dooernedeevrvn" is
+an anagram of the palindrome "neveroddoreven". Given S = "aabcba", the
+function should return 0. Complexity:
+
+● expected worstcase time complexity is O(N);
+
+● expected worstcase space complexity is O(1) (not counting the storage
+required for input arguments).
+
+Question 3) Write a sample app which has a single view with a single button.
+Initially, it has white background. When user starts pressing the button (and keeps
+pressing), the app changes background colour such that
+
+If pressed < 1 second, background remains white 12 second, blue 23 second, green
+34 second, yellow 45 second, orange 5+ second, red
+(Button being centred in all resolutions and orientations is a plus)
+
+Question 4)Write a sample app which has a single page that gathers weather data
+from https://openweathermap.org/apiyou can choose any city or country. When the
+page load there will be a selectbox to choose one of the 5 different city/country.
+Default selection is empty. When we change selectbox value, it automatically will get
+data from open weather api from openweathermap.org and shows it in the screen.
+(bonus: you can use conditional weather images like (sunny, cloudy, rainy etc.))
+Please use one of the programming patterns like MVC, MVVM etc. And write a short
+explanation why you used that pattern, how did you manage to seperate layers (UI,
+controller, model, webservice call etc.)
